@@ -48,7 +48,7 @@ export default {
     getLastResult() {
       var config = {
         method: "get",
-        url: "http://ergast.com/api/f1/current/last/results.json",
+        url: "https://ergast.com/api/f1/current/last/results.json",
         headers: {},
       };
 
