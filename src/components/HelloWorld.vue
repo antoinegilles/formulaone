@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row class="text-center justify-center">
-      <v-col cols="7" class="tableau-resultats">
+      <v-col cols="12" class="tableau-resultats">
         <h1>
           {{ nomGrandPrix }} ({{ annee }})
         </h1>
