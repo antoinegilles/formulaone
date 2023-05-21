@@ -2,14 +2,13 @@
   <v-container>
     <v-row class="text-center justify-center">
       <v-col cols="12" class="tableau-resultats">
-        <h1>
-          {{ nomGrandPrix }} ({{ annee }})
-        </h1>
+        <h1>{{ nomGrandPrix }} ({{ annee }})</h1>
+
         <v-table theme="dark" class="tableau-content">
           <thead>
             <tr>
               <th class="text-left titre">Pilote</th>
-              <th class="text-left titre">Calories</th>
+              <th class="text-left titre">Temps</th>
             </tr>
           </thead>
           <tbody>
@@ -32,16 +31,18 @@
 <script>
 import axios from "axios";
 
+
 export default {
   name: "HelloWorld",
-
+  components: {
+  },
   data() {
     return {
       circuit: [],
       resultats: [],
       infoGlobale: [],
       nomGrandPrix: "",
-      annee:''
+      annee: "",
     };
   },
   methods: {
@@ -58,7 +59,7 @@ export default {
           console.log(response.data.MRData.RaceTable.Races[0]);
           this.nomGrandPrix = response.data.MRData.RaceTable.Races[0].raceName;
           this.resultats = response.data.MRData.RaceTable.Races[0].Results;
-          this.annee = response.data.MRData.RaceTable.Races[0].season
+          this.annee = response.data.MRData.RaceTable.Races[0].season;
         })
         .catch(function (error) {
           console.log(error);
@@ -74,10 +75,10 @@ export default {
 .tableau-resultats {
   overflow: auto;
 }
-.tableau-content{
+.tableau-content {
   background-color: #e10600;
 }
-.titre{
+.titre {
   color: black !important;
   font-weight: bold !important;
 }

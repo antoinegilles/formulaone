@@ -3,7 +3,11 @@
     <v-main>
       <v-app-bar :elevation="2">
         <nav>
-          <router-link to="/">Home</router-link>
+          <router-link to="/" exact>Resultats</router-link>
+        </nav>
+        <nav>
+          <router-link to="/about" exact>Gagnant</router-link>
+
         </nav>
 
         <!-- <router-link to="/about">About</router-link> -->
