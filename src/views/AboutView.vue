@@ -3,15 +3,14 @@
     <h1>Gagnant</h1>
 
     <div class="d-flex justify-center">
-      <div>
-        <redbull-car></redbull-car>
-      </div>
       <div class="tableau-result">
         <v-table height="300px">
           <tbody>
             <tr>
               <td>Nom</td>
-              <td>{{ gagnant?.Driver.givenName }} {{ gagnant?.Driver.familyName }}</td>
+              <td>
+                {{ gagnant?.Driver.givenName }} {{ gagnant?.Driver.familyName }}
+              </td>
             </tr>
             <tr>
               <td>Ecurie</td>
@@ -36,18 +35,15 @@
   </div>
 </template>
 <script>
-import RedbullCar from "../components/objet3d/RedbullCar.vue";
 import axios from "axios";
 
 export default {
-  components: {
-    RedbullCar,
-  },
+  components: {},
   data() {
     return {
       circuit: [],
       resultats: [],
-      gagnant:null,
+      gagnant: null,
       infoGlobale: [],
       nomGrandPrix: "",
       annee: "",
@@ -81,7 +77,7 @@ export default {
 </script>
 
 <style>
-.tableau-result{
+.tableau-result {
   padding-top: 7em;
 }
 </style>
